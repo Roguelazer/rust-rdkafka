@@ -54,7 +54,7 @@ fn consume_and_print(brokers: &str, group_id: &str, topics: &Vec<&str>) {
     // such as complext computations on a thread pool or asynchronous IO.
     let message_stream = consumer.start();
 
-    for message in message_stream.take(5).wait() {
+    for message in message_stream.wait() {
         match message {
             Err(e) => {
                 warn!("Can't receive message: {:?}", e);
