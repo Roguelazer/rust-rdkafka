@@ -10,7 +10,7 @@ description = "Native bindings to the librdkafka library"
 keywords = ["kafka", "rdkafka"]
 
 [dependencies]
-lz4-sys = "^ 1.0"
+lz4-sys = { git = "https://github.com/Roguelazer/lz4-rs", branch = "new_liblz4" }
 libz-sys = "^ 1.0"
 openssl-sys = "~ 0.9.0"
 
